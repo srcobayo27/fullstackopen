@@ -1,0 +1,51 @@
+Diagrama de secuencia
+    Participante Navegador
+    Participante servidor
+    Participante Usuario
+
+    Navegador->>servidor: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    Se activa el servidor 
+    El servidor responde->> Navegador: HTML document
+    Se desactiva el servidor
+
+    Navegador->>servidor POST https://studies.cs.helsinki.fi/exampleapp/main.css
+    Se activa el servidor
+    El servidor responde->> Navegador : CSS file
+    Se desactiva el servidor
+
+    Navegador->>servidor POST https://studies.cs.helsinki.fi/exampleapp/main.js
+    Se activa el servidor
+    El servidor responde->> Navegador: JavaScript file
+    Se desactiva el servidor
+
+    Navegador->>servidor POST https://studies.cs.helsinki.fi/exampleapp/data.json
+    Se activa el servidor
+    El servidor responde->> Navegador: Json file
+    Se desactiva el servidor
+
+    // Despues el Usuario ingresa datos y presiona en el boton "save" 
+    Usuario->>Navegador POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    Se activa el navegador
+    Se activa el servidor
+    El servidor responde->> Navegador: HTML document
+
+    Navegador->>servidor: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    Se activa el servidor 
+    El servidor responde->> Navegador: HTML document
+    Se desactiva el servidor
+
+    Navegador->>servidor POST https://studies.cs.helsinki.fi/exampleapp/main.css
+    Se activa el servidor
+    El servidor responde->> Navegador : CSS file
+    Se desactiva el servidor
+
+    Navegador->>servidor POST https://studies.cs.helsinki.fi/exampleapp/main.js
+    Se activa el servidor
+    El servidor responde->> Navegador: JavaScript file
+    Se desactiva el servidor
+
+    Navegador->>servidor POST https://studies.cs.helsinki.fi/exampleapp/data.json
+    Se activa el servidor
+    El servidor responde->> Navegador: Json file
+    Se desactiva el servidor
+    
