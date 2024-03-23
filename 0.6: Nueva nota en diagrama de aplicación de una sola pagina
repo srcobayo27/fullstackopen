@@ -1,0 +1,31 @@
+Diagrama de secuencia
+    Participante Navegador
+    Participante servidor
+    Participante Usuario
+
+
+    Navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/spa
+    Se activa el servidor 
+    El servidor responde->> Navegador: HTML document
+    Se desactiva el servidor
+
+    Navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    Se activa el servidor
+    El servidor responde->> Navegador: CSS file
+    Se desactiva el servidor
+
+    Navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+    Se activa el servidor
+    El servidor responde->> Navegador: JavaScript file
+    Se desactiva el servidor
+
+    Navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    Se activa el servidor
+    El servidor responde->> Navegador: Json file
+    Se desactiva el servidor   
+
+    // El usuario agrega informacion en el form y lo envia
+    Usuario->>Navegador POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    Se activa el navegador refrescando la pagina
+    Se activa el servidor
+    El servidor responde->> Navegador: Json file
